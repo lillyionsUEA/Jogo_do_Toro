@@ -180,6 +180,10 @@ MonoBehaviour:
   leftBoundaryX: -10
   rightBoundaryX: 10
   requiredClicks: 1
+  slowMotionFactor: 0.5
+  slowMotionDuration: 2
+  freezeFullScreen: {fileID: -4257430204848109918, guid: 424799608f7334c24bf367e4bbfa7f9a, type: 2}
+  _material: {fileID: 2100000, guid: 9778cb5da623a7940b8fbabac7d9d64f, type: 2}
 --- !u!82 &2038576925290287815
 AudioSource:
   m_ObjectHideFlags: 0

@@ -2,20 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ItemSlider : MonoBehaviour
 {
     public enum MoveDirection { Left, Right }
     private MoveDirection moveDirection = MoveDirection.Left;
 
+    [Header("Movement Settings")]
     public float slideSpeed = 2f;
     public float leftBoundaryX = -10f;
     public float rightBoundaryX = 10f;
-    private bool collected = false;
     private AudioSource slidingAudio;
 
+    [Header("Click Count")]
     private int clickcount = 0;
-    public int requiredClicks = 2; // Cliques para o item edredom
+    public int requiredClicks = 2;
+
+
+
+    private bool collected = false;
 
     void Start()
     {
@@ -52,7 +59,7 @@ public class ItemSlider : MonoBehaviour
     {
         if (collected) return;
 
-        clickcount++; // Incrementa o contador de cliques
+        clickcount++;
 
         if (clickcount >= requiredClicks)
         {
@@ -63,23 +70,29 @@ public class ItemSlider : MonoBehaviour
             }
             int pointsToAdd = (requiredClicks == 2) ? 2 : 1;
             ScoreManager.Instance.AddPoints(pointsToAdd);
+
+            if (CompareTag("SlowTimerItem"))
+            {
+                TimerController timerController = FindObjectOfType<TimerController>();
+                if (timerController != null)
+                {
+                    timerController.ActivateSlowMotion();  // Ativa o efeito de desaceleração de tempo
+                }
+            }
+
+            if (CompareTag("RottenItem"))
+            {
+                ScoreManager.Instance.AddPoints(-2); // Penaliza o jogador
+            }
+
             Destroy(gameObject);
         }
         else
         {
             Debug.Log("Clique necessário: " + (requiredClicks - clickcount));
         }
-
-        /*collected = true;
-        if (slidingAudio != null && slidingAudio.isPlaying)
-        {
-            slidingAudio.Stop();
-        }
-
-        ScoreManager.Instance.AddPoints(1);
-
-        Destroy(gameObject);*/
     }
+
 
     private void OnDestroy()
     {
