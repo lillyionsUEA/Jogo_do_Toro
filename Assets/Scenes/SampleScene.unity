@@ -844,6 +844,8 @@ MonoBehaviour:
   - {fileID: 6482863408505981807, guid: f40a6b965ba2d5d448ace7acfcf6b346, type: 3}
   - {fileID: 4392720409237792175, guid: 2fb5425c40adfb647b0fb0d3c10797db, type: 3}
   - {fileID: 6433136326598951517, guid: 0f354b76e5b95464fbab48cce0ca4813, type: 3}
+  - {fileID: 769057609259498982, guid: 11e8ab649e6f0d446add7f2090ae18b0, type: 3}
+  - {fileID: 2739761424750144952, guid: 1346e0b7f307dbe4190fc70e4cd5b01e, type: 3}
   minSpawnInterval: 0.4
   maxSpawnInterval: 3
   minSpeed: 5
@@ -919,6 +921,8 @@ MonoBehaviour:
   - {fileID: 6482863408505981807, guid: f40a6b965ba2d5d448ace7acfcf6b346, type: 3}
   - {fileID: 4392720409237792175, guid: 2fb5425c40adfb647b0fb0d3c10797db, type: 3}
   - {fileID: 6433136326598951517, guid: 0f354b76e5b95464fbab48cce0ca4813, type: 3}
+  - {fileID: 769057609259498982, guid: 11e8ab649e6f0d446add7f2090ae18b0, type: 3}
+  - {fileID: 2739761424750144952, guid: 1346e0b7f307dbe4190fc70e4cd5b01e, type: 3}
   minSpawnInterval: 0.5
   maxSpawnInterval: 2
   minSpeed: 4
@@ -1860,6 +1864,8 @@ MonoBehaviour:
   - {fileID: 6482863408505981807, guid: f40a6b965ba2d5d448ace7acfcf6b346, type: 3}
   - {fileID: 4392720409237792175, guid: 2fb5425c40adfb647b0fb0d3c10797db, type: 3}
   - {fileID: 6433136326598951517, guid: 0f354b76e5b95464fbab48cce0ca4813, type: 3}
+  - {fileID: 769057609259498982, guid: 11e8ab649e6f0d446add7f2090ae18b0, type: 3}
+  - {fileID: 2739761424750144952, guid: 1346e0b7f307dbe4190fc70e4cd5b01e, type: 3}
   minSpawnInterval: 0.3
   maxSpawnInterval: 4
   minSpeed: 7
@@ -2148,6 +2154,8 @@ MonoBehaviour:
   - {fileID: 6482863408505981807, guid: f40a6b965ba2d5d448ace7acfcf6b346, type: 3}
   - {fileID: 4392720409237792175, guid: 2fb5425c40adfb647b0fb0d3c10797db, type: 3}
   - {fileID: 6433136326598951517, guid: 0f354b76e5b95464fbab48cce0ca4813, type: 3}
+  - {fileID: 769057609259498982, guid: 11e8ab649e6f0d446add7f2090ae18b0, type: 3}
+  - {fileID: 2739761424750144952, guid: 1346e0b7f307dbe4190fc70e4cd5b01e, type: 3}
   minSpawnInterval: 0.4
   maxSpawnInterval: 7
   minSpeed: 5
@@ -2556,6 +2564,8 @@ MonoBehaviour:
   - {fileID: 6482863408505981807, guid: f40a6b965ba2d5d448ace7acfcf6b346, type: 3}
   - {fileID: 4392720409237792175, guid: 2fb5425c40adfb647b0fb0d3c10797db, type: 3}
   - {fileID: 6433136326598951517, guid: 0f354b76e5b95464fbab48cce0ca4813, type: 3}
+  - {fileID: 769057609259498982, guid: 11e8ab649e6f0d446add7f2090ae18b0, type: 3}
+  - {fileID: 2739761424750144952, guid: 1346e0b7f307dbe4190fc70e4cd5b01e, type: 3}
   minSpawnInterval: 0.8
   maxSpawnInterval: 4
   minSpeed: 4
@@ -2894,6 +2904,8 @@ MonoBehaviour:
   - {fileID: 6482863408505981807, guid: f40a6b965ba2d5d448ace7acfcf6b346, type: 3}
   - {fileID: 4392720409237792175, guid: 2fb5425c40adfb647b0fb0d3c10797db, type: 3}
   - {fileID: 6433136326598951517, guid: 0f354b76e5b95464fbab48cce0ca4813, type: 3}
+  - {fileID: 769057609259498982, guid: 11e8ab649e6f0d446add7f2090ae18b0, type: 3}
+  - {fileID: 2739761424750144952, guid: 1346e0b7f307dbe4190fc70e4cd5b01e, type: 3}
   minSpawnInterval: 0.3
   maxSpawnInterval: 5
   minSpeed: 1
@@ -3309,6 +3321,10 @@ MonoBehaviour:
   sliderObject: {fileID: 1686823047}
   audioSource: {fileID: 2075271358}
   timerEndSound: {fileID: 8300000, guid: 1960aacb7cf1978438b4136a681b32e7, type: 3}
+  slowMotionFactor: 0.5
+  slowMotionDuration: 3
+  freezeFullScreen: {fileID: -4257430204848109918, guid: 424799608f7334c24bf367e4bbfa7f9a, type: 2}
+  _material: {fileID: 2100000, guid: 9778cb5da623a7940b8fbabac7d9d64f, type: 2}
   timeLimit: 30
 --- !u!4 &2075271357
 Transform:

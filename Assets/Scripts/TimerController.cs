@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class TimerController : MonoBehaviour
@@ -14,9 +15,17 @@ public class TimerController : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip timerEndSound;
 
+    [Header("Slow Motion Settings")]
+    public float slowMotionFactor = 0.5f; // Fator de desaceleração
+    public float slowMotionDuration = 3f; // Duração da desaceleração
+    [SerializeField] private ScriptableRendererFeature freezeFullScreen;
+    [SerializeField] private Material _material;
+
 
     float time;
     bool startTimer;
+    private bool isSlowMotionActive = false;
+
     public float timeLimit = 60f;
     float multiplierFactor;
     public bool TimerRunning { get { return startTimer; } }
@@ -50,6 +59,7 @@ public class TimerController : MonoBehaviour
 
     void Start()
     {
+        freezeFullScreen.SetActive(false);
         timerText.text = timeLimit.ToString();
         time = timeLimit;
         startTimer = false;
@@ -70,6 +80,43 @@ public class TimerController : MonoBehaviour
         if (startTimer)
         {
             startTimer = false;
+        }
+    }
+
+    public void ActivateSlowMotion()
+    {
+        if (!isSlowMotionActive)
+        {
+            isSlowMotionActive = true;
+            StartCoroutine(SlowDownTime());
+        }
+    }
+
+    private IEnumerator SlowDownTime()
+    {
+        if (freezeFullScreen != null)
+        {
+            freezeFullScreen.SetActive(true); // Ativa o VFX
+        }
+        else
+        {
+            Debug.LogWarning("Freeze VFX not assigned!");
+        }
+
+        isSlowMotionActive = true;
+
+        // Reduz a velocidade do tempo
+        Time.timeScale = slowMotionFactor;
+
+        // Espera a duração do efeito
+        yield return new WaitForSecondsRealtime(slowMotionDuration);
+
+        // Restaura o tempo
+        Time.timeScale = 1f;
+        isSlowMotionActive = false;
+        if (freezeFullScreen != null)
+        {
+            freezeFullScreen.SetActive(false); // Desativa o VFX
         }
     }
 
