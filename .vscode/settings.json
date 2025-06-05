@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Jogo do Toró.sln"
+    "dotnet.defaultSolution": "Jogo_do_Toro.sln"
 }
