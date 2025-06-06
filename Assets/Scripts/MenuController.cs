@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.UIElements.Experimental;
 
 public class MenuController : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class MenuController : MonoBehaviour
     {
         var root = uiMenuDocument.rootVisualElement;
         uiMenuDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+        ShowMusicMenu();
 
         playButton = root.Q<Button>("PlayButton");
         creditsButton = root.Q<Button>("CreditsButton");
@@ -55,6 +57,14 @@ public class MenuController : MonoBehaviour
             creditsPanel.style.display = DisplayStyle.None;
         }
     }
+
+    public void SetUpMenu()
+    {
+        uiMenuDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+        resultUIDocument.rootVisualElement.style.display = DisplayStyle.None;
+        ShowMusicMenu();
+
+    }
     
     // Mostrar o menu e tocar a música
     public void ShowMusicMenu()
@@ -66,18 +76,6 @@ public class MenuController : MonoBehaviour
                 audioSource.clip = menuMusic;
                 audioSource.loop = true;
                 audioSource.Play();
-            }
-        }
-    }
-
-    // Fechar o menu e parar a música
-    public void HideMusicMenu()
-    {
-        if (uiMenuDocument.rootVisualElement.style.display == DisplayStyle.None)
-        {
-            if (audioSource.isPlaying)
-            {
-                audioSource.Stop();
             }
         }
     }
@@ -94,11 +92,10 @@ public class MenuController : MonoBehaviour
         scoreManager.ClearAllItems();
         inputHandlerObject.SetActive(true);
 
-        /*UIManager uiManager = FindObjectOfType<UIManager>();
-        if (uiManager != null)
+        if (audioSource != null && menuMusic != null)
         {
-            uiManager.StartGame();
-        }*/
+            audioSource.Stop();
+        }
 
         CanvasGroup hudCanvasGroup = FindObjectOfType<UIManager>().hudCanvasGroup;
         if (hudCanvasGroup != null)

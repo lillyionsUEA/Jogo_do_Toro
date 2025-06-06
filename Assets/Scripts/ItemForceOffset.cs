@@ -14,7 +14,6 @@ public class ItemForceOffset : MonoBehaviour
         if (CompareTag(TargetTag1) || CompareTag(TargetTag2) || CompareTag(TargetTag3))
         {
             transform.position += new Vector3(0f, YOffset, 0f);
-            Debug.Log($"{name} had meets a target item for Y offset applied: {YOffset}", this);
         }
         else
         {
