@@ -5,9 +5,9 @@ using UnityEngine;
 public class ItemForceOffset : MonoBehaviour
 {
     [SerializeField] private float YOffset = -1f;
-    [SerializeField] private string TargetTag1 = "TwoClickItem";
-    [SerializeField] private string TargetTag2 = "SlowTimerItem";
-    [SerializeField] private string TargetTag3 = "RottenItem";
+    private string TargetTag1 = "TwoClickItem";
+    private string TargetTag2 = "SlowTimerItem";
+    private string TargetTag3 = "RottenItem";
 
     void Awake()
     {
