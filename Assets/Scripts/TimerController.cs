@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.Rendering.LookDev;
 
 public class TimerController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class TimerController : MonoBehaviour
     public SpriteRenderer backgroundRenderer;
     public Sprite normalBackground;
     public Sprite rainyBackground;
+    public SpriteRenderer rainRenderer;
 
     [Header("Sound Settings")]
     public AudioSource audioSource;
@@ -53,6 +55,7 @@ public class TimerController : MonoBehaviour
             }
 
             ChangeBackground(rainyBackground);
+            ActivateRainEffect();
 
             OnTimerEnd?.Invoke();
             Debug.Log("Timer ended!");
@@ -80,6 +83,7 @@ public class TimerController : MonoBehaviour
         startTimer = true;
 
         ChangeBackground(normalBackground);
+        StopRainEffect();
 
         sliderObject.fillAmount = time * multiplierFactor;
     }
@@ -140,12 +144,27 @@ public class TimerController : MonoBehaviour
         Debug.Log("Timer restarted!");
         Debug.Log("Time scale" + Time.timeScale);
     }
-    
+
     private void ChangeBackground(Sprite newBackground)
     {
         if (backgroundRenderer != null)
         {
             backgroundRenderer.sprite = newBackground;
+        }
+    }
+    private void ActivateRainEffect()
+    {
+        if (rainRenderer != null)
+        {
+            rainRenderer.enabled = true;
+        }
+    }
+
+    private void StopRainEffect()
+    {
+        if (rainRenderer != null)
+        {
+            rainRenderer.enabled = false;
         }
     }
 }
