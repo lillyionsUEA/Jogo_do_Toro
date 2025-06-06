@@ -21,6 +21,9 @@ public class TimerController : MonoBehaviour
     [Header("Sound Settings")]
     public AudioSource audioSource;
     public AudioClip timerEndSound;
+    public AudioClip inGameMusic;
+    public AudioSource rainSource;
+    public AudioClip rainSound;
 
     [Header("Slow Motion Settings")]
     public float slowMotionFactor = 0.5f; // Fator de desaceleração
@@ -30,7 +33,7 @@ public class TimerController : MonoBehaviour
 
 
     float time;
-    bool startTimer;
+    public static bool startTimer;
     private bool isSlowMotionActive = false;
 
     public float timeLimit = 60f;
@@ -56,6 +59,11 @@ public class TimerController : MonoBehaviour
 
             ChangeBackground(rainyBackground);
             ActivateRainEffect();
+            if (rainSource != null && rainSound != null)
+            {
+                rainSource.clip = rainSound;
+                rainSource.Play();
+            }
 
             OnTimerEnd?.Invoke();
             Debug.Log("Timer ended!");
@@ -84,6 +92,16 @@ public class TimerController : MonoBehaviour
 
         ChangeBackground(normalBackground);
         StopRainEffect();
+        if (audioSource != null && inGameMusic != null)
+        {
+            audioSource.clip = inGameMusic;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+        if (rainSource != null && rainSound != null)
+            {
+                rainSource.Stop();
+            }
 
         sliderObject.fillAmount = time * multiplierFactor;
     }

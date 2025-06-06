@@ -102,9 +102,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 8342159398686273878}
   inGameSource: {fileID: 4623165639238991172}
-  rainSource: {fileID: 0}
+  rainSource: {fileID: 2457384914128189345}
   background: {fileID: 8300000, guid: 60ae3696c9aba5e4187951f0cc1fa8a7, type: 3}
-  rainSound: {fileID: 0}
+  inGameMusic: {fileID: 8300000, guid: cece461fff666a4d6b9ffa1c405c1891, type: 3}
+  rainSound: {fileID: 8300000, guid: c29308937820d2f419ce4e18e350a105, type: 3}
 --- !u!1 &2547089555881698514
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +148,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cece461fff666a4d6b9ffa1c405c1891, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

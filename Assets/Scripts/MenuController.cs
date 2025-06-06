@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UIElements.Experimental;
@@ -63,6 +64,15 @@ public class MenuController : MonoBehaviour
         uiMenuDocument.rootVisualElement.style.display = DisplayStyle.Flex;
         resultUIDocument.rootVisualElement.style.display = DisplayStyle.None;
         ShowMusicMenu();
+        TimerController timerController = FindObjectOfType<TimerController>();
+        if (timerController != null)
+        {
+            timerController.StopTimer();
+            timerController.RestartTimer();
+            TimerController.startTimer = false;
+            timerController.audioSource.Stop();
+            timerController.rainSource.Stop();
+        }
 
     }
     
