@@ -70,4 +70,5 @@ public class SpawnPoint : MonoBehaviour
             Debug.LogWarning("ItemSlider component not found on the spawned item: " + item.name);
         }
     }
+
 }

@@ -101,9 +101,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 199
-        y: 300
+        y: 298
         width: 709
-        height: 600
+        height: 601
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9d02db237241804ba2e2ca2735fffa8
-      internalID: -182614033
+      spriteID: 0f16708dea387f344b26b8f4c5e9ed87
+      internalID: 903553878
       vertices: []
       indices: 
       edges: []
@@ -121,9 +121,9 @@ TextureImporter:
       name: RoupasSpritesV3_1
       rect:
         serializedVersion: 2
-        x: 1256
-        y: 300
-        width: 709
+        x: 1252
+        y: 304
+        width: 712
         height: 600
       alignment: 2
       pivot: {x: 0.5, y: 1}
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbb2ad52ee15a51458cbd23a45fe1b6c
-      internalID: 1174090151
+      spriteID: 701f9d24d2768014a98185c144b3698a
+      internalID: 272144848
       vertices: []
       indices: 
       edges: []
@@ -142,10 +142,10 @@ TextureImporter:
       name: RoupasSpritesV3_2
       rect:
         serializedVersion: 2
-        x: 2338
-        y: 300
-        width: 709
-        height: 597
+        x: 2334
+        y: 297
+        width: 713
+        height: 602
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c394b1972a5748b4a9d481600167789f
-      internalID: 513294540
+      spriteID: ecac2a09a863fe843ba890ebc59d5b2d
+      internalID: -948913489
       vertices: []
       indices: 
       edges: []
@@ -163,10 +163,10 @@ TextureImporter:
       name: RoupasSpritesV3_3
       rect:
         serializedVersion: 2
-        x: 3389
-        y: 155
-        width: 772
-        height: 745
+        x: 3390
+        y: 154
+        width: 775
+        height: 751
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f9e71bcfc889b5438f9ffd1828309f4
-      internalID: 1767471456
+      spriteID: 975b75a8372172d4996ac21f2b4b36a0
+      internalID: -1979929175
       vertices: []
       indices: 
       edges: []
@@ -184,10 +184,10 @@ TextureImporter:
       name: RoupasSpritesV3_4
       rect:
         serializedVersion: 2
-        x: 4471
-        y: 155
-        width: 778
-        height: 745
+        x: 4473
+        y: 154
+        width: 775
+        height: 751
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a27d09642bc8d541a190bf66aac56de
-      internalID: -421312758
+      spriteID: 994240a7788b37742b7ae9bcd68fdaf9
+      internalID: -637966555
       vertices: []
       indices: 
       edges: []
@@ -205,10 +205,10 @@ TextureImporter:
       name: RoupasSpritesV3_5
       rect:
         serializedVersion: 2
-        x: 5553
-        y: 155
-        width: 777
-        height: 745
+        x: 5556
+        y: 154
+        width: 775
+        height: 751
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 803e3ab8bc1bb434e840b8e773e55982
-      internalID: 1907467522
+      spriteID: cdafd9b6725f07941b63ee4c1c0b5752
+      internalID: 1122279271
       vertices: []
       indices: 
       edges: []
@@ -226,10 +226,10 @@ TextureImporter:
       name: RoupasSpritesV3_6
       rect:
         serializedVersion: 2
-        x: 6641
-        y: 364
-        width: 766
-        height: 536
+        x: 6640
+        y: 362
+        width: 767
+        height: 542
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,8 +237,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a3321cad17d68e4dab6e3f9e1550c99
-      internalID: -1823613274
+      spriteID: c6dbf319f3434644caece8efe315a364
+      internalID: 1657431153
       vertices: []
       indices: 
       edges: []
@@ -247,10 +247,10 @@ TextureImporter:
       name: RoupasSpritesV3_7
       rect:
         serializedVersion: 2
-        x: 7724
-        y: 360
-        width: 765
-        height: 540
+        x: 7723
+        y: 361
+        width: 767
+        height: 538
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b851cd9e1702374c84128845380328b
-      internalID: 272571298
+      spriteID: 6a8a946900762a044b465ec887fdce5e
+      internalID: -1615439934
       vertices: []
       indices: 
       edges: []
@@ -269,9 +269,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 8799
-        y: 364
-        width: 760
-        height: 536
+        y: 362
+        width: 761
+        height: 543
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60313ba63debda3428f950c6ff2bcde6
-      internalID: 1556406720
+      spriteID: 9891804dedeef2a4eb39d5c11a89b68a
+      internalID: 47457148
       vertices: []
       indices: 
       edges: []
@@ -289,40 +289,19 @@ TextureImporter:
       name: RoupasSpritesV3_9
       rect:
         serializedVersion: 2
-        x: 9834
-        y: 107
-        width: 867
-        height: 799
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 9838
+        y: 103
+        width: 863
+        height: 808
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9de17e3dadbb02e43b69d346ac231b03
-      internalID: -874516566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RoupasSpritesV3_10
-      rect:
-        serializedVersion: 2
-        x: 10800
-        y: 764
-        width: 15
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3c49048ffa734840b3b8ddce4780766
-      internalID: 1387939339
+      spriteID: 746782516e11d6549afd753069343ad0
+      internalID: -1481025114
       vertices: []
       indices: 
       edges: []
@@ -331,10 +310,10 @@ TextureImporter:
       name: RoupasSpritesV3_11
       rect:
         serializedVersion: 2
-        x: 11326
-        y: 291
-        width: 1092
-        height: 618
+        x: 11325
+        y: 287
+        width: 1093
+        height: 622
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,8 +321,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c86ad26d8bc54634cbea5e2f734de19f
-      internalID: -2132448513
+      spriteID: 55f36da196931a14c90d52c13aced2f5
+      internalID: 832566103
       vertices: []
       indices: 
       edges: []
@@ -352,40 +331,19 @@ TextureImporter:
       name: RoupasSpritesV3_12
       rect:
         serializedVersion: 2
-        x: 9802
-        y: 670
-        width: 51
-        height: 88
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 13104
+        y: 202
+        width: 775
+        height: 709
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 737c9d5208e1cb5498b315de50f0b22c
-      internalID: 2139837579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RoupasSpritesV3_13
-      rect:
-        serializedVersion: 2
-        x: 10682
-        y: 670
-        width: 51
-        height: 94
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c82cad88e84c71408db882f35db13e6
-      internalID: 1870983348
+      spriteID: 87c8be49cd0b9bd4b82448a147c92dc4
+      internalID: -872789113
       vertices: []
       indices: 
       edges: []
@@ -401,20 +359,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RoupasSpritesV3_0: -182614033
-      RoupasSpritesV3_1: 1174090151
-      RoupasSpritesV3_10: 1387939339
-      RoupasSpritesV3_11: -2132448513
-      RoupasSpritesV3_12: 2139837579
-      RoupasSpritesV3_13: 1870983348
-      RoupasSpritesV3_2: 513294540
-      RoupasSpritesV3_3: 1767471456
-      RoupasSpritesV3_4: -421312758
-      RoupasSpritesV3_5: 1907467522
-      RoupasSpritesV3_6: -1823613274
-      RoupasSpritesV3_7: 272571298
-      RoupasSpritesV3_8: 1556406720
-      RoupasSpritesV3_9: -874516566
+      RoupasSpritesV3_0: 903553878
+      RoupasSpritesV3_1: 272144848
+      RoupasSpritesV3_10: 1927559462
+      RoupasSpritesV3_11: 832566103
+      RoupasSpritesV3_12: -872789113
+      RoupasSpritesV3_13: 1105216133
+      RoupasSpritesV3_14: -1430039945
+      RoupasSpritesV3_15: -2101402363
+      RoupasSpritesV3_2: -948913489
+      RoupasSpritesV3_3: -1979929175
+      RoupasSpritesV3_4: -637966555
+      RoupasSpritesV3_5: 1122279271
+      RoupasSpritesV3_6: 1657431153
+      RoupasSpritesV3_7: -1615439934
+      RoupasSpritesV3_8: 47457148
+      RoupasSpritesV3_9: -1481025114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

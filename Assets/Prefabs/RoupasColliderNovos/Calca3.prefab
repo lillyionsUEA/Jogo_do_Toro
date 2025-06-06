@@ -96,10 +96,6 @@ MonoBehaviour:
   leftBoundaryX: -10
   rightBoundaryX: 10
   requiredClicks: 1
-  slowMotionFactor: 0.5
-  slowMotionDuration: 2
-  freezeFullScreen: {fileID: -4257430204848109918, guid: 424799608f7334c24bf367e4bbfa7f9a, type: 2}
-  _material: {fileID: 2100000, guid: 9778cb5da623a7940b8fbabac7d9d64f, type: 2}
 --- !u!82 &-3391143340937053492
 AudioSource:
   m_ObjectHideFlags: 0
@@ -269,12 +265,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 513294540, guid: 2da18c79d15102f42bd5a3effaf18d95, type: 3}
+  m_Sprite: {fileID: -948913489, guid: 2da18c79d15102f42bd5a3effaf18d95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.09, y: 5.98166}
+  m_Size: {x: 7.13, y: 6.0376368}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

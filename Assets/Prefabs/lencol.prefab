@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2132448513, guid: 2da18c79d15102f42bd5a3effaf18d95, type: 3}
+  m_Sprite: {fileID: 832566103, guid: 2da18c79d15102f42bd5a3effaf18d95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.8, y: 10.8}
+  m_Size: {x: 10.93, y: 6.2382226}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 6504693365418538376}
   - component: {fileID: -2779264464613862903}
   - component: {fileID: -2424446785997922198}
+  - component: {fileID: -7186141316038321897}
   m_Layer: 0
   m_Name: lencol
   m_TagString: TwoClickItem
@@ -134,10 +135,6 @@ MonoBehaviour:
   leftBoundaryX: -10
   rightBoundaryX: 10
   requiredClicks: 2
-  slowMotionFactor: 0.5
-  slowMotionDuration: 2
-  freezeFullScreen: {fileID: -4257430204848109918, guid: 424799608f7334c24bf367e4bbfa7f9a, type: 2}
-  _material: {fileID: 2100000, guid: 9778cb5da623a7940b8fbabac7d9d64f, type: 2}
 --- !u!61 &-2424446785997922198
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -183,3 +180,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.4, y: 3.1604772}
   m_EdgeRadius: 0
+--- !u!114 &-7186141316038321897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6433136326598951517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 960f849576d18f845a389536c8a7e18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1823613274, guid: 2da18c79d15102f42bd5a3effaf18d95, type: 3}
+  m_Sprite: {fileID: 1657431153, guid: 2da18c79d15102f42bd5a3effaf18d95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.66, y: 5.3704686}
+  m_Size: {x: 7.67, y: 5.4358788}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -180,10 +180,6 @@ MonoBehaviour:
   leftBoundaryX: -10
   rightBoundaryX: 10
   requiredClicks: 1
-  slowMotionFactor: 0.5
-  slowMotionDuration: 2
-  freezeFullScreen: {fileID: -4257430204848109918, guid: 424799608f7334c24bf367e4bbfa7f9a, type: 2}
-  _material: {fileID: 2100000, guid: 9778cb5da623a7940b8fbabac7d9d64f, type: 2}
 --- !u!82 &6690414780622602886
 AudioSource:
   m_ObjectHideFlags: 0
