@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8389453026680641499}
   m_Layer: 0
   m_Name: lencol_sprite
-  m_TagString: Untagged
+  m_TagString: TwoClickItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,3 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 960f849576d18f845a389536c8a7e18b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  YOffset: -1
+  TargetTag1: TwoClickItem
+  TargetTag2: SlowTimerItem
+  TargetTag3: RottenItem
