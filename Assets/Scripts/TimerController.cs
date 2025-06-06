@@ -11,6 +11,11 @@ public class TimerController : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private Image sliderObject;
 
+    [Header("Background Settings")]
+    public SpriteRenderer backgroundRenderer;
+    public Sprite normalBackground;
+    public Sprite rainyBackground;
+
     [Header("Sound Settings")]
     public AudioSource audioSource;
     public AudioClip timerEndSound;
@@ -46,11 +51,13 @@ public class TimerController : MonoBehaviour
             {
                 audioSource.PlayOneShot(timerEndSound);
             }
-            
+
+            ChangeBackground(rainyBackground);
+
             OnTimerEnd?.Invoke();
             Debug.Log("Timer ended!");
             ScoreManager.Instance.CheckAndSaveHighScore();
-            
+
         }
 
         timerText.text = Mathf.CeilToInt(time).ToString();
@@ -71,6 +78,8 @@ public class TimerController : MonoBehaviour
     {
         multiplierFactor = 1f / timeLimit;
         startTimer = true;
+
+        ChangeBackground(normalBackground);
 
         sliderObject.fillAmount = time * multiplierFactor;
     }
@@ -130,5 +139,13 @@ public class TimerController : MonoBehaviour
 
         Debug.Log("Timer restarted!");
         Debug.Log("Time scale" + Time.timeScale);
+    }
+    
+    private void ChangeBackground(Sprite newBackground)
+    {
+        if (backgroundRenderer != null)
+        {
+            backgroundRenderer.sprite = newBackground;
+        }
     }
 }

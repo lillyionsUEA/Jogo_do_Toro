@@ -1690,6 +1690,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653775136}
   m_CullTransparentMesh: 1
+--- !u!212 &698883167 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1793159348511612052, guid: 3ea375f237805eb4d82f63538b73f2a6, type: 3}
+  m_PrefabInstance: {fileID: 1251035836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &978081570
 GameObject:
   m_ObjectHideFlags: 0
@@ -3319,6 +3324,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 1310671704}
   sliderObject: {fileID: 1686823047}
+  backgroundRenderer: {fileID: 698883167}
+  normalBackground: {fileID: 21300000, guid: f9f2c9bb4f978d04bbbf65057004a643, type: 3}
+  rainyBackground: {fileID: 21300000, guid: ac76e9a70ee1e7c45918114612ece500, type: 3}
   audioSource: {fileID: 2075271358}
   timerEndSound: {fileID: 8300000, guid: 1960aacb7cf1978438b4136a681b32e7, type: 3}
   slowMotionFactor: 0.5
