@@ -3,20 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.Rendering.LookDev;
 
 public class TimerController : MonoBehaviour
 {
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private Image sliderObject;
 
+    [Header("Background Settings")]
+    public SpriteRenderer backgroundRenderer;
+    public Sprite normalBackground;
+    public Sprite rainyBackground;
+    public SpriteRenderer rainRenderer;
+
     [Header("Sound Settings")]
     public AudioSource audioSource;
     public AudioClip timerEndSound;
+    public AudioClip inGameMusic;
+    public AudioSource rainSource;
+    public AudioClip rainSound;
+
+    [Header("Slow Motion Settings")]
+    public float slowMotionFactor = 0.5f; // Fator de desaceleração
+    public float slowMotionDuration = 3f; // Duração da desaceleração
+    [SerializeField] private ScriptableRendererFeature freezeFullScreen;
+    [SerializeField] private Material _material;
 
 
     float time;
-    bool startTimer;
+    public static bool startTimer;
+    private bool isSlowMotionActive = false;
+
     public float timeLimit = 60f;
     float multiplierFactor;
     public bool TimerRunning { get { return startTimer; } }
@@ -37,11 +56,19 @@ public class TimerController : MonoBehaviour
             {
                 audioSource.PlayOneShot(timerEndSound);
             }
-            
+
+            ChangeBackground(rainyBackground);
+            ActivateRainEffect();
+            if (rainSource != null && rainSound != null)
+            {
+                rainSource.clip = rainSound;
+                rainSource.Play();
+            }
+
             OnTimerEnd?.Invoke();
             Debug.Log("Timer ended!");
             ScoreManager.Instance.CheckAndSaveHighScore();
-            
+
         }
 
         timerText.text = Mathf.CeilToInt(time).ToString();
@@ -50,6 +77,7 @@ public class TimerController : MonoBehaviour
 
     void Start()
     {
+        freezeFullScreen.SetActive(false);
         timerText.text = timeLimit.ToString();
         time = timeLimit;
         startTimer = false;
@@ -62,6 +90,19 @@ public class TimerController : MonoBehaviour
         multiplierFactor = 1f / timeLimit;
         startTimer = true;
 
+        ChangeBackground(normalBackground);
+        StopRainEffect();
+        if (audioSource != null && inGameMusic != null)
+        {
+            audioSource.clip = inGameMusic;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+        if (rainSource != null && rainSound != null)
+            {
+                rainSource.Stop();
+            }
+
         sliderObject.fillAmount = time * multiplierFactor;
     }
 
@@ -70,6 +111,43 @@ public class TimerController : MonoBehaviour
         if (startTimer)
         {
             startTimer = false;
+        }
+    }
+
+    public void ActivateSlowMotion()
+    {
+        if (!isSlowMotionActive)
+        {
+            isSlowMotionActive = true;
+            StartCoroutine(SlowDownTime());
+        }
+    }
+
+    private IEnumerator SlowDownTime()
+    {
+        if (freezeFullScreen != null)
+        {
+            freezeFullScreen.SetActive(true); // Ativa o VFX
+        }
+        else
+        {
+            Debug.LogWarning("Freeze VFX not assigned!");
+        }
+
+        isSlowMotionActive = true;
+
+        // Reduz a velocidade do tempo
+        Time.timeScale = slowMotionFactor;
+
+        // Espera a duração do efeito
+        yield return new WaitForSecondsRealtime(slowMotionDuration);
+
+        // Restaura o tempo
+        Time.timeScale = 1f;
+        isSlowMotionActive = false;
+        if (freezeFullScreen != null)
+        {
+            freezeFullScreen.SetActive(false); // Desativa o VFX
         }
     }
 
@@ -83,5 +161,28 @@ public class TimerController : MonoBehaviour
 
         Debug.Log("Timer restarted!");
         Debug.Log("Time scale" + Time.timeScale);
+    }
+
+    private void ChangeBackground(Sprite newBackground)
+    {
+        if (backgroundRenderer != null)
+        {
+            backgroundRenderer.sprite = newBackground;
+        }
+    }
+    private void ActivateRainEffect()
+    {
+        if (rainRenderer != null)
+        {
+            rainRenderer.enabled = true;
+        }
+    }
+
+    private void StopRainEffect()
+    {
+        if (rainRenderer != null)
+        {
+            rainRenderer.enabled = false;
+        }
     }
 }

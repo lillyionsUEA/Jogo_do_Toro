@@ -18,6 +18,12 @@ public class UIManager : MonoBehaviour
     public void ShowMainMenu()
     {
         mainMenuUIDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+        MenuController menuController = FindObjectOfType<MenuController>();
+        if (menuController != null)
+        {
+            menuController.SetUpMenu();
+        }
+
         HideHUD();
         pauseUIDocument.rootVisualElement.style.display = DisplayStyle.None;
         resultUIDocument.rootVisualElement.style.display = DisplayStyle.None;
